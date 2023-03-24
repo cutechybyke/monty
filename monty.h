@@ -56,6 +56,23 @@ typedef struct glob_s
 extern glob_t global;
 extern int value;
 
+/**
+ * struct bus_s - variables -args, file, line content
+ * @arg: value
+ * @file: pointer to monty file
+ * @content: line content
+ * @lifi: flag change stack <-> queue
+ * Description: carries values through the program
+ */
+typedef struct bus_s
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
+}  bus_t;
+extern bus_t bus;
+
 void handle_command(char *argv);
 
 int get_opc(stack_t **stack, char *arg, char *item, int count);

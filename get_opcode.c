@@ -26,6 +26,11 @@ int get_opc(stack_t **stack, char *arg, char *item, int count)
 		{"mod", _mod},
 		{"pchar", _pchar},
 		{"pstr", _pstr},
+		{"queue", f_queue},
+		{"addqueue", _addqueue},
+		{"rotl", f_rotl},
+		{"rotr", f_rotr},
+		{"stack", f_stack},
 		{NULL, NULL}
 	};
 
