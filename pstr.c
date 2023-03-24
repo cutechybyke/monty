@@ -7,15 +7,18 @@
  */
 void _pstr(stack_t **stack, unsigned int line_number)
 {
-	stack_t *current = *stack;
-	(void)line_number;
+	stack_t *h;
+	(void)counter;
 
-	while (current && current->n)
+	h = *stack;
+	while (h)
 	{
-		if (current->n < 32 || current->n > 127)
+		if (h->n > 127 || h->n <= 0)
+		{
 			break;
-		printf("%c", current->n);
-		current = current->next;
+		}
+		printf("%c", h->n);
+		h = h->next;
 	}
-	putchar(10);
+	printf("\n");
 }

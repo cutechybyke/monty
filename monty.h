@@ -75,7 +75,10 @@ void _pchar(stack_t **stack, unsigned int line_number);
 void _pstr(stack_t **stack, unsigned int line_number);
 void free_dlistint(stack_t *stack);
 void cleanStack(stack_t **stack);
-
+void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void f_rotl(stack_t **head, __attribute__((unused)) unsigned int counter);
+void addqueue(stack_t **head, int n);
+void f_queue(stack_t **head, unsigned int counter);
 /*Help*/
 int _isdigit(char *c);
 stack_t *new_Node(int n);
